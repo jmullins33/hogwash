@@ -1,4 +1,3 @@
-import CleanReveal from "./CleanReveal";
 import HeroSlideshow from "./HeroSlideshow";
 import ImageSlot from "./ImageSlot";
 import QuoteForm from "./QuoteForm";
@@ -37,6 +36,45 @@ const stats = [
   ["0", "Grime left behind."],
 ];
 
+const results = [
+  {
+    src: "/hogwash/driveway.jpg",
+    tag: "Driveway",
+    alt: "Before and after of a stained home driveway restored to clean concrete",
+    caption: "Years of dirt and tire staining lifted off residential concrete.",
+  },
+  {
+    src: "/hogwash/gazebo.jpg",
+    tag: "Wood restoration",
+    alt: "Before and after of a poolside wooden gazebo restored from gray to warm brown",
+    caption: "Weathered gray wood brought back to a warm, natural finish.",
+  },
+  {
+    src: "/hogwash/garage.jpg",
+    tag: "Garage & apron",
+    alt: "Before and after of a garage door and concrete apron on a metal building",
+    caption: "Grimy door and apron cleaned up sharp on a pole barn.",
+  },
+  {
+    src: "/hogwash/container.jpg",
+    tag: "Container",
+    alt: "Before and after of an algae-covered shipping container cleaned to bright white",
+    caption: "Green algae stripped off a storage container in a single pass.",
+  },
+  {
+    src: "/hogwash/deck-rv.jpg",
+    tag: "Deck",
+    alt: "Before and after of a weathered RV site deck restored to clean golden wood",
+    caption: "Slippery, debris-covered decking cleaned down to fresh wood.",
+  },
+  {
+    src: "/hogwash/rv-deck2.jpg",
+    tag: "RV site",
+    alt: "Before and after of an RV campsite deck cleaned from gray to golden brown",
+    caption: "A whole campsite deck refreshed and ready for the season.",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -57,6 +95,7 @@ export default function Home() {
         </a>
         <nav className="nav" aria-label="Primary navigation">
           <a href="#services">Services</a>
+          <a href="#results">Results</a>
           <a href="#process">How it works</a>
           <a href="#quote">Quote</a>
         </nav>
@@ -108,26 +147,49 @@ export default function Home() {
               Dirt, mold, and algae don&apos;t just look bad. Left alone, they
               slowly break down concrete, wood, and siding. A good wash protects
               what you&apos;ve put into your property and saves you from repairs
-              down the road. Drag the slider below and see for yourself.
+              down the road. Take a look at the before and afters below.
             </p>
           </div>
           <ImageSlot
             className="intro__photo"
-            src="/hogwash/intro.jpg"
-            alt="Close-up of a driveway being pressure washed, dirt lifting away"
+            src="/hogwash/surface-cleaner.jpg"
+            alt="Surface cleaner attachment lifting years of grime off a concrete driveway"
             label="Action photo"
             rounded
           />
         </section>
 
-        <section className="reveal-section" aria-label="Interactive dirty to clean reveal">
-          <CleanReveal />
+        <section className="results" id="results" aria-labelledby="results-title">
+          <div className="results__top">
+            <p className="eyebrow">Before &amp; after</p>
+            <h2 id="results-title">Real jobs. Real difference.</h2>
+            <p>
+              Every one of these is an actual Hogwash job. Same surface, same
+              day, just a whole lot cleaner.
+            </p>
+          </div>
+          <ul className="results-grid" aria-label="Before and after cleaning results">
+            {results.map((item) => (
+              <li className="result-card" key={item.src}>
+                <ImageSlot
+                  className="result-card__photo"
+                  src={item.src}
+                  alt={item.alt}
+                  label="Before / after"
+                />
+                <div className="result-card__body">
+                  <span className="result-card__tag">{item.tag}</span>
+                  <p>{item.caption}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </section>
 
         <section className="image-band" aria-label="Hogwash brand statement">
           <ImageSlot
             className="image-band__bg"
-            src="/hogwash/band.jpg"
+            src="/hogwash/driveway2.jpg"
             alt=""
             label="Full-width photo"
           />

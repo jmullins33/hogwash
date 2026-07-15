@@ -5,19 +5,19 @@ import ImageSlot from "./ImageSlot";
 
 const slides = [
   {
-    src: "/hogwash/hero-1.jpg",
-    alt: "Freshly pressure-washed driveway next to an uncleaned section",
+    src: "/hogwash/driveway.jpg",
+    alt: "Before and after of a home driveway, dirty concrete restored to clean",
     caption: "Driveways brought back to life",
   },
   {
-    src: "/hogwash/hero-2.jpg",
-    alt: "Hogwash owner cleaning home siding with professional equipment",
-    caption: "Gentle, thorough house washing",
+    src: "/hogwash/gazebo.jpg",
+    alt: "Before and after of a poolside wooden gazebo, weathered gray wood restored to warm brown",
+    caption: "Decks, patios & wood restored",
   },
   {
-    src: "/hogwash/owner-rig.jpg",
-    alt: "Hogwash Exterior Cleaning owner beside the fully equipped service trailer",
-    caption: "Owner-operated. The rig that shows up.",
+    src: "/hogwash/garage.jpg",
+    alt: "Before and after of a garage door and concrete apron on a metal building",
+    caption: "Garages, barns & entryways",
   },
 ];
 
