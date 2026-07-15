@@ -10,7 +10,7 @@ const facebookEmbedUrl = `https://www.facebook.com/plugins/page.php?href=${encod
   facebookUrl
 )}&tabs=timeline&width=500&height=620&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true`;
 
-const trustChips = ["Owner-operated", "Free quotes", "Fully equipped rig"];
+  const trustChips = ["Owner-operated", "Free quotes", "Satisfaction guaranteed"];
 
 const services = [
   "Driveways",
