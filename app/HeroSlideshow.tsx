@@ -1,13 +1,23 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import ImageSlot from "./ImageSlot";
 
 const slides = [
   {
-    src: "/hogwash/owner-rig.jpg",
-    alt: "Hogwash Exterior Cleaning owner standing beside the fully equipped service trailer",
-    caption: "Owner-operated. The rig that shows up.",
+    src: "/hogwash/driveway.jpg",
+    alt: "Before and after of a home driveway, dirty concrete restored to clean",
+    caption: "Driveways brought back to life",
+  },
+  {
+    src: "/hogwash/gazebo.jpg",
+    alt: "Before and after of a poolside wooden gazebo, weathered gray wood restored to warm brown",
+    caption: "Decks, patios & wood restored",
+  },
+  {
+    src: "/hogwash/garage.jpg",
+    alt: "Before and after of a garage door and concrete apron on a metal building",
+    caption: "Garages, barns & entryways",
   },
 ];
 
@@ -33,11 +43,10 @@ export default function HeroSlideshow() {
             className={`hero-slide${index === active ? " hero-slide--active" : ""}`}
             key={slide.src}
           >
-            <Image
+            <ImageSlot
               src={slide.src}
               alt={slide.alt}
-              fill
-              sizes="100vw"
+              label="Hero photo"
               priority={index === 0}
             />
           </div>
