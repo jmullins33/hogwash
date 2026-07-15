@@ -75,6 +75,54 @@ const results = [
   },
 ];
 
+const testimonials = [
+  {
+    quote:
+      "My driveway looked brand new. Showed up on time, worked fast, and left the place spotless. Couldn't be happier.",
+    name: "Sarah M.",
+    location: "Homeowner",
+  },
+  {
+    quote:
+      "Our deck was gray and slimy and I figured we'd have to replace it. One wash and it looks like new wood again.",
+    name: "Dave R.",
+    location: "Repeat customer",
+  },
+  {
+    quote:
+      "Fair price, great communication, and the results speak for themselves. Already booked him for the house siding next.",
+    name: "Jenna K.",
+    location: "Homeowner",
+  },
+];
+
+const faqs = [
+  {
+    q: "How much does it cost?",
+    a: "Every job is different, so pricing depends on the size, surface, and how dirty things are. Most jobs we can quote right over the phone, and quotes are always free with zero pressure.",
+  },
+  {
+    q: "Will pressure washing damage my surfaces?",
+    a: "No. We match the method to the surface, using a gentle low-pressure soft wash for roofs and siding and higher pressure only where it's safe, like concrete. The right technique gets it clean without the damage.",
+  },
+  {
+    q: "Do I need to be home?",
+    a: "Not necessarily. As long as we can access the areas being cleaned and an outdoor water spigot, you're welcome to go about your day. We'll confirm everything before we start.",
+  },
+  {
+    q: "What about my plants, pets, and landscaping?",
+    a: "We take care around greenery and use safe cleaning solutions. Plants get pre-wet and rinsed, and we keep an eye on pets and anything that needs protecting.",
+  },
+  {
+    q: "How long does a job take?",
+    a: "Most residential jobs wrap up in a few hours depending on size. We'll give you a time estimate with your quote.",
+  },
+  {
+    q: "What areas do you serve?",
+    a: "We serve local homes and businesses throughout the surrounding area. Not sure if you're in range? Just call or text and we'll let you know.",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -96,7 +144,8 @@ export default function Home() {
         <nav className="nav" aria-label="Primary navigation">
           <a href="#services">Services</a>
           <a href="#results">Results</a>
-          <a href="#process">How it works</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#faq">FAQ</a>
           <a href="#quote">Quote</a>
         </nav>
         <div className="site-header__actions">
@@ -253,6 +302,47 @@ export default function Home() {
           </ol>
         </section>
 
+        <section className="testimonials" id="reviews" aria-labelledby="testimonials-title">
+          <div className="testimonials__top">
+            <p className="eyebrow">What people say</p>
+            <h2 id="testimonials-title">Neighbors who&apos;d call again.</h2>
+          </div>
+          <ul className="testimonial-grid" aria-label="Customer reviews">
+            {testimonials.map((item) => (
+              <li className="testimonial-card" key={item.name}>
+                <span className="testimonial-card__stars" aria-label="5 out of 5 stars">
+                  {"\u2605\u2605\u2605\u2605\u2605"}
+                </span>
+                <blockquote>{item.quote}</blockquote>
+                <div className="testimonial-card__by">
+                  <span className="testimonial-card__name">{item.name}</span>
+                  <span className="testimonial-card__loc">{item.location}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="faq" id="faq" aria-labelledby="faq-title">
+          <div className="faq__top">
+            <p className="eyebrow">Good to know</p>
+            <h2 id="faq-title">Questions, answered.</h2>
+          </div>
+          <div className="faq-list">
+            {faqs.map((item) => (
+              <details className="faq-item" key={item.q}>
+                <summary>
+                  <span>{item.q}</span>
+                  <span className="faq-item__icon" aria-hidden="true">
+                    +
+                  </span>
+                </summary>
+                <p>{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
         <section className="quote" id="quote" aria-labelledby="quote-title">
           <div className="quote__copy">
             <p className="eyebrow">Free quote</p>
@@ -311,7 +401,9 @@ export default function Home() {
         </div>
         <nav className="footer__nav" aria-label="Footer navigation">
           <a href="#services">Services</a>
-          <a href="#process">How it works</a>
+          <a href="#results">Results</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#faq">FAQ</a>
           <a href="#quote">Quote</a>
         </nav>
         <a className="footer__phone" href={phoneHref} aria-label={`Call or text Hogwash at ${phoneDisplay}`}>
