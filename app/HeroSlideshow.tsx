@@ -7,7 +7,7 @@ const slides = [
   {
     src: "/hogwash/owner-rig.jpg",
     alt: "Hogwash Exterior Cleaning owner standing beside the fully equipped service trailer",
-    caption: "Owner-operated — the rig that shows up",
+    caption: "Owner-operated. The rig that shows up.",
   },
 ];
 

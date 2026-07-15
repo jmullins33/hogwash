@@ -23,7 +23,7 @@ const services = [
 ];
 
 const stats = [
-  ["1", "Owner on every job — the person you call is the person who shows up"],
+  ["1", "Owner on every job. The person you call is the person who shows up"],
   ["100%", "Free quotes, zero pressure (on you, anyway)"],
   ["0", "Grime left behind"],
 ];
@@ -68,12 +68,12 @@ export default function Home() {
               priority
             />
             <p className="eyebrow eyebrow--light">
-              Professional exterior cleaning — homes, driveways, decks &amp; rigs
+              Professional exterior cleaning for homes, driveways, decks &amp; rigs
             </p>
             <h1 id="hero-title">Bring back the curb appeal.</h1>
             <p className="hero-grand__lede">
               Hogwash strips away years of dirt, algae, and grime from the
-              surfaces people notice first — with professional equipment and
+              surfaces people notice first, using professional equipment and
               the right pressure for every surface. You&apos;ll see the
               difference from the street.
             </p>
@@ -94,11 +94,10 @@ export default function Home() {
             <h2 id="intro-title">Grime costs more than a wash does.</h2>
           </div>
           <p>
-            Dirt, mold, and algae don&apos;t just look bad — left alone, they
-            slowly break down concrete, wood, and siding. A professional wash
-            prevents costly repairs, protects what you&apos;ve invested in your
-            property, and makes the whole place feel cared for again. Drag the
-            slider below and see for yourself.
+            Dirt, mold, and algae don&apos;t just look bad. Left alone, they
+            slowly break down concrete, wood, and siding. A good wash protects
+            what you&apos;ve put into your property and saves you from repairs
+            down the road. Drag the slider below and see for yourself.
           </p>
         </section>
 
@@ -176,8 +175,8 @@ export default function Home() {
             <p className="eyebrow">Follow the work</p>
             <h2 id="facebook-title">The proof is on the page.</h2>
             <p>
-              Fresh before-and-afters, availability notes, and updates straight
-              from the Hogwash Facebook page — the work speaks for itself.
+              Fresh before and afters, availability notes, and updates straight
+              from the Hogwash Facebook page. The work speaks for itself.
             </p>
             <a className="button button--light" href={facebookUrl} target="_blank" rel="noreferrer">
               Open Facebook

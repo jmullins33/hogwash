@@ -6,7 +6,7 @@ const surfaces = [
   {
     label: "Concrete",
     title: "Driveways, sidewalks & patios",
-    text: "Surface cleaning lifts years of buildup out of concrete — evenly, edge to edge, without wand stripes. Oil spots, algae shadows, and tire marks don't stand a chance.",
+    text: "Surface cleaning lifts years of buildup out of concrete, evenly and edge to edge, with no wand stripes. Oil spots, algae shadows, and tire marks don't stand a chance.",
   },
   {
     label: "Homes",
@@ -16,12 +16,12 @@ const surfaces = [
   {
     label: "Decks",
     title: "Decks, fences & gazebos",
-    text: "Wood washed back to its real color without chewing up the grain — ready to stain, seal, or just enjoy again.",
+    text: "Wood washed back to its real color without chewing up the grain, so it's ready to stain, seal, or just enjoy again.",
   },
   {
     label: "Trailers",
     title: "RVs, trailers & containers",
-    text: "Campers, rigs, and storage containers cleaned with the right touch for painted metal and fiberglass — no swirl marks, no stripped decals.",
+    text: "Campers, rigs, and storage containers cleaned with the right touch for painted metal and fiberglass. No swirl marks, no stripped decals.",
   },
   {
     label: "Commercial",
